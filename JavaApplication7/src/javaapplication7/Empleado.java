@@ -23,6 +23,7 @@ public class Empleado {
    
     protected double salario_primario;
     int otro =0;
+    int nuevo;
     
  
     /**
