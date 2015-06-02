@@ -22,6 +22,7 @@ public class Empleado {
     protected int edad;
    
     protected double salario_primario;
+    int otro =0;
     
  
     /**
