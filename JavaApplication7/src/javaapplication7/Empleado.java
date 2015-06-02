@@ -21,7 +21,8 @@ public class Empleado {
    
     protected int edad;
    
-    protected double salario;
+    protected double salario_primario;
+    
  
     /**
      * metodo getNombre para retornar el nombre del empleado
@@ -74,7 +75,7 @@ public class Empleado {
      * @version 1.0
      */
     public double getSalario() {
-        return salario;
+        return salario_primario;
     }
  
     /**
@@ -86,7 +87,7 @@ public class Empleado {
     public boolean plus (double sueldoPlus){
         boolean aumento=false;
         if (edad>40 && compruebaNombre()){
-            salario+=sueldoPlus;
+            salario_primario+=sueldoPlus;
             aumento=true;
         }
         return aumento;
@@ -109,6 +110,7 @@ public class Empleado {
      * constructor vacio de la clase     */
     public Empleado(){
         this ("", "", 0, 0);
+        this.edad = 0;
     }
  
   /**
@@ -120,10 +122,11 @@ public class Empleado {
    * @param salario parametro para asignar el salario del empleado
    */
     public Empleado(String nombre, String apellido, int edad, double salario){
+        this.edad = 0;
         this.nombre=nombre;
         this.apellido=apellido;
         this.edad=edad;
-        this.salario=salario;
+        this.salario_primario=salario;
     }
     
     
